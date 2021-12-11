@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>br.com.watanabe</groupId>
+    <artifactId>example-api</artifactId>
+    <version>1.0.0</version>
+    <name>example-api</name>
+    <description>Example-api</description>
+    <packaging>jar</packaging>
+
+    <properties>
+        <java-clean-plugin.version>1.0.0</java-clean-plugin.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>br.com.kazuo</groupId>
+            <artifactId>java-clean-plugin</artifactId>
+            <version>${java-clean-plugin.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>br.com.kazuo</groupId>
+                <artifactId>java-clean-plugin</artifactId>
+                <version>${java-clean-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <appType>api</appType>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
